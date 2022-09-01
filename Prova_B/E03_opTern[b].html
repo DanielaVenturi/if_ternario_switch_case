@@ -11,10 +11,22 @@
 
     //ENTRADA
 
+const temperaturaDiaUm = prompt( `qual a temperatura minima do primeiro dia`);
+
+const temperaturaDiaDois = prompt( `qual a temperatura minima do seegundo dia`);
+
+
+const temperaturaDiaTres = prompt( `qual a temperatura minima do terceiro dia`);
+
+
+const temperaturaDiaQuatro = prompt( `qual a temperatura minima do quarto dia`);
 
     //PROCESSAMENTO
+const media = (temperaturaDiaUm + temperaturaDiaDois + temperaturaDiaTres + temperaturaDiaQuatro) / 4 
 
-
+( media <= 10)? document.write(`Frio intenso`)
+:(media <= 20)? document.write ( `Frio Moderado`)
+:document.write(`Partiu praia`)
     //SAÍDA
 
 </script>

@@ -12,10 +12,22 @@
 
     //ENTRADA
 
+   
 
     //PROCESSAMENTO
 
 
     //SAÍDA
+
+const valorDaResidencia = Number(prompt( `Qual o valor da residencia que deseja comprar ?`));
+const mesesParaSerPago = Number(prompt(`em quantos meses voce vai pagar o financiamento da casa?`));
+let valorfinal;
+
+(mesesParaSerPago >= 120)? valorfinal = valorDaResidencia + (valorDaResidencia * 55/100)
+: (mesesParaSerPago >= 240)? valorfinal = valorDaResidencia + (valorDaResidencia * 65/100)
+:  valorfinal = valeorDaResidencia + ( valeorDaResidencia * 85/100);
+
+document.write(`O valor da residencia com juros e de ${valorfinal}`);
+
 
 </script>

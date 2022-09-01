@@ -1,5 +1,6 @@
 <script>
-    //USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO
+   
+ //USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO
     
     //PROBLEMA: Perfil do Profissional
     //Peça para o usuário informar quantos anos possui de experiência profissional. Peça também para que o Profissional informe se possui Curso de Graduação e também informar se possui Curso de Pós-Graduação. Outro dado relevante é perguntar se o Profissional realiza trabalho de voluntariado.
@@ -11,11 +12,29 @@
     //Calcule os pontos e apresente o nível de experiência do Profissional.
 
     //ENTRADA
-
+    const experiencia = Number(prompt(`Quantos anos voce tem de experiencia profissional?`));
+const graduacao = prompt(`Voce pussui curso de graduacao?  S-SIM N-Nao`).toUpperCase();
+const posGraduacao = prompt(`Voce pussui curso de pos-graduacao?  S-SIM N-Nao`).toUpperCase();
+const trabalhoVoluntario = prompt(`Voce faz trabalho voluntario?  S-SIM N-Nao`);
 
     //PROCESSAMENTO
+const experienciaPonto = experiencia * 1.5 ;
+let pontosTotalGraduacao = 0;
+let pontosTotalPosGraduacao = 0;
+let pontosTotalVoluntario = 0;
 
 
+(graduacao === `S` )? pontosTotalGraduacao = 10
+: (Graduacao === `N` )? pontosTotalGraduacao =  0
+:(posGraduacao === `S`)? pontosTotalPosGraduacao =  15
+: (posGraduacao === `N`)? pontosTotalPosGraduacao = 0 
+:(trabalhoVoluntario === `S`)? pontosTotalVoluntario = 10
+: pontosTotalVoluntario = 0;
     //SAÍDA
+const totalDePontos = experienciaPonto + pontosTotalGraduacao + pontosTotalPosGraduacao + pontosTotalVoluntario;
+
+    (totalDePontos >= 35 )? document.write(`voce  é considerado EM EVOLUCAO, possui ${totalDePontos} pontos`)
+:document.write(`voce  é considerado VETERANO, possui ${totalDePontos} pontos`);
 
 </script>
+
